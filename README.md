@@ -2,13 +2,14 @@
 
 Swimy tranforms clusters in a graph into swimlanes like in processes modeling.
 
-A first dot execution get the graph calculated and then pipe it to Swimy which does the magic and finally neato produce the final output.
+It uses http://www.graphviz.org/ and the gvpr − graph pattern scanning and processing language http://www.graphviz.org/pdf/gvpr.1.pdf
 
+Swimy does execute dot to get the graph calculated and then pipe it to Swimy which does the magic and finally neato produces the final output.
 
-Based on the type of nodes, swimy :
+Based on the type of shapes of nodes, swimy :
 - moves triangle are locked on the left (or on the top).
 - moves invtriangle are locked to the left (or the bottom).
-- and clean every edges points to give some space to each line.
+- and clean every edges points of shape box, in order to give some space to each line.
 
 ## Usage
 
