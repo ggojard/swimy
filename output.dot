@@ -1,57 +1,41 @@
 digraph diagram24 {
-	graph [bb="0,0,993,800",
-		llx=719,
-		maxy_graph=800,
-		nodesep=1,
+	graph [bb="0,0,1073,370",
+		llx_previous=672,
+		maxy_graph=370,
+		new_graph_width=1073,
+		nodesep=0.5,
 		overlap=scalexy,
 		rankdir=LR,
 		sep=1,
 		splines=ortho,
-		urx=856
+		urx=762,
+		urx_previous=809
 	];
 	node [fontsize=14.0,
 		label="\N"
 	];
-	subgraph cluster_8 {
-		graph [bb="525,0,662.000,800.000",
-			color=lightblue,
-			label="ROLE 1",
-			lheight=0.19,
-			lp="593.5,792.000",
-			lwidth=0.65,
-			style=filled
-		];
-		4		 [color=yellow,
-			fixedsize=true,
-			height=0.84722,
-			label=0,
-			pos="593.5,512",
-			shape=box,
-			style="rounded,filled",
-			width=1.6806];
-	}
 	subgraph cluster_7 {
-		graph [bb="137,0,468.000,800.000",
-			color=lightblue,
+		graph [bb="137,0,468.000,370.000",
+			color=orange,
 			label="ROLE 2",
 			lheight=0.19,
-			lp="302.5,792.000",
+			lp="302.5,335.000",
 			lwidth=0.65,
 			style=filled
 		];
 		1		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
-			label=1,
-			pos="205.5,180",
+			label="act 1",
+			pos="205.5,144",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 		3		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
-			label=0,
-			pos="399.5,180",
+			label="act 3",
+			pos="399.5,141",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
@@ -59,69 +43,78 @@ digraph diagram24 {
 		12		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
-			label=1,
+			label="act 12",
 			pos="205.5,47",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 	}
-	subgraph cluster_9 {
-		graph [bb="719,0,856.000,800.000",
+	subgraph cluster_8 {
+		graph [bb="672,0,809.000,370.000",
 			color=lightblue,
+			label="ROLE 1",
+			lheight=0.19,
+			lp="740.5,335.000",
+			lwidth=0.65,
+			style=filled
+		];
+		4		 [color=yellow,
+			fixedsize=true,
+			height=0.84722,
+			label="act 4740.5,274",
+			pos="740.5,274",
+			shape=box,
+			style="rounded,filled",
+			width=1.6806];
+	}
+	subgraph cluster_9 {
+		graph [bb="625,0,762.000,370.000",
+			color=darkgreen,
 			label="ROLE 3",
 			lheight=0.19,
-			lp="787.5,792.000",
+			lp="693.5,335.000",
 			lwidth=0.65,
 			style=filled
 		];
 		10		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
-			label=0,
-			pos="787.5,731",
+			label="act 10693.5,252",
+			pos="693.5,252",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 	}
+	3 -> 4	 [minlen=2.0];
+	11	 [color=red,
+		fixedsize=true,
+		height=1,
+		label="Result 11",
+		pos="569,159",
+		shape=invtriangle,
+		style="rounded,filled",
+		width=1];
+	12 -> 11	 [minlen=2.0];
 	4 -> 10	 [minlen=2.0];
+	4 -> 11	 [minlen=2.0];
 	5	 [color=red,
 		fixedsize=true,
 		height=1,
-		label="Ending result 5",
-		pos="993,658",
+		label="Result 5",
+		pos="569,334",
 		shape=invtriangle,
 		style="rounded,filled",
 		width=1];
 	4 -> 5	 [minlen=2.0];
-	11	 [color=red,
-		fixedsize=true,
-		height=1,
-		label="Ending result 11",
-		pos="993,220",
-		shape=invtriangle,
-		style="rounded,filled",
-		width=1];
-	4 -> 11	 [minlen=2.0];
-	3 -> 4	 [minlen=2.0];
-	12 -> 11	 [minlen=2.0];
-	10 -> 4	 [color=red,
-		constraint=false,
-		minlen=2.0,
-		style=filled];
-	10 -> 3	 [color=red,
-		constraint=false,
-		minlen=2.0,
-		style=filled];
-	10 -> 12	 [color=green,
-		constraint=false,
-		minlen=2.0,
-		style=filled];
+	10 -> 3	 [minlen=2.0];
+	10 -> 12	 [minlen=2.0];
+	10 -> 4	 [minlen=2.0];
 	10 -> 5	 [minlen=2.0];
 	2	 [color=green,
 		fixedsize=true,
 		height=1,
-		label="Starting Event 2",
-		pos="36,800",
+		label="Event 2",
+		pos="36,144",
 		shape=triangle,
 		style="rounded,filled",
 		width=1];

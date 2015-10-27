@@ -1,12 +1,19 @@
 digraph diagram24 {
-rankdir=LR;overlap=scalexy;splines=ortho;sep=1;nodesep=1;
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+ */
+
+rankdir=LR;overlap=scalexy;splines=ortho;sep=1;nodesep=0.5;
 /*rankdir=TB;overlap=scalexy;splines=ortho;sep=1;nodesep=1;*/
 
 node[fontsize=14.0]
 
-subgraph cluster_7 { label="ROLE 2";style=filled;color=lightblue;1;3;12}
 subgraph cluster_8 { label="ROLE 1";style=filled;color=lightblue;4}
-subgraph cluster_9 { label="ROLE 3";style=filled;color=lightblue;10}
+subgraph cluster_7 { label="ROLE 2";style=filled;color=orange;1;3;12}
+subgraph cluster_9 { label="ROLE 3";style=filled;color=darkgreen;10}
+
 
 "4"  [label="act 4"; shape=box,style="rounded,filled",color=yellow,fixedsize=true,width=1.6806,height=0.84722]
 "1"  [label="act 1"; shape=box,style="rounded,filled",color=yellow,fixedsize=true,width=1.6806,height=0.84722]
@@ -26,11 +33,15 @@ subgraph cluster_9 { label="ROLE 3";style=filled;color=lightblue;10}
 "4" -> "11" [minlen=2.0];
 "12" -> "11" [minlen=2.0];
 
-/*"10" -> "3" [minlen=2.0];
+/* LOOP */
+"10" -> "3" [minlen=2.0];
 "10" -> "4" [minlen=2.0];
 "10" -> "12" [minlen=2.0];
-*/
-"10" -> "3" [minlen=2.0,constraint=false,style="filled",color=red];
+
+/* CONSTRAINTS*/
+/*"10" -> "3" [minlen=2.0,constraint=false,style="filled",color=red];
 "10" -> "4" [minlen=2.0,constraint=false,style="filled",color=red];
 "10" -> "12" [minlen=2.0,constraint=false,style="filled",color=darkgreen];
+*/
+
 }
