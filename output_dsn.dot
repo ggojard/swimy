@@ -1,0 +1,124 @@
+digraph diagram24 {
+	graph [bb="0,8,4396,292",
+		firstllx=856,
+		firstw=137,
+		nodesep=0.5,
+		overlap=scalexy,
+		rankdir=LR,
+		sep=1,
+		splines=ortho
+	];
+	node [fontsize=14.0,
+		label="\N"
+	];
+	subgraph cluster_8 {
+		graph [bb="856,8,993,256",
+			color=lightblue,
+			label="ROLE 1",
+			lheight=0.19,
+			lp="896,244",
+			lwidth=0.65,
+			style=filled
+		];
+		4		 [color=yellow,
+			fixedsize=true,
+			height=0.84722,
+			label="act 4",
+			pos="924.5,144",
+			shape=box,
+			style="rounded,filled",
+			width=1.6806];
+	}
+	subgraph cluster_7 {
+		graph [bb="1849,8,2180,256",
+			color=orange,
+			label="ROLE 2",
+			lheight=0.19,
+			lp="1889,244",
+			lwidth=0.65,
+			style=filled
+		];
+		1		 [color=yellow,
+			fixedsize=true,
+			height=0.84722,
+			label="act 1",
+			pos="1917.5,66",
+			shape=box,
+			style="rounded,filled",
+			width=1.6806];
+		3		 [color=yellow,
+			fixedsize=true,
+			height=0.84722,
+			label="act 3",
+			pos="2111.5,144",
+			shape=box,
+			style="rounded,filled",
+			width=1.6806];
+		1 -> 3		 [minlen=2.0,
+			pos="e,2111.5,113.5 1978.1,87 2035,87 2111.5,87 2111.5,87 2111.5,87 2111.5,103.5 2111.5,103.5"];
+		12		 [color=yellow,
+			fixedsize=true,
+			height=0.84722,
+			label="act 12",
+			pos="2111.5,47",
+			shape=box,
+			style="rounded,filled",
+			width=1.6806];
+		1 -> 12		 [minlen=2.0,
+			pos="e,2050.7,56 1978.1,56 1978.1,56 2040.7,56 2040.7,56"];
+	}
+	subgraph cluster_9 {
+		graph [bb="3036,8,3173,256",
+			color=darkgreen,
+			label="ROLE 3",
+			lheight=0.19,
+			lp="3076,244",
+			lwidth=0.65,
+			style=filled
+		];
+		10		 [color=yellow,
+			fixedsize=true,
+			height=0.84722,
+			label="act 10",
+			pos="3104.5,195",
+			shape=box,
+			style="rounded,filled",
+			width=1.6806];
+	}
+	4 -> 10	 [minlen=2.0,
+		pos="e,3043.9,197 924.5,174.52 924.5,186.3 924.5,197 924.5,197 924.5,197 3033.9,197 3033.9,197"];
+	11	 [color=red,
+		fixedsize=true,
+		height=1,
+		label="Result 11",
+		pos="4360,69",
+		shape=invtriangle,
+		style="rounded,filled",
+		width=1];
+	4 -> 11	 [minlen=2.0,
+		pos="e,4359.8,100 924.5,113.44 924.5,105.93 924.5,100 924.5,100 924.5,100 4349.8,100 4349.8,100"];
+	3 -> 4	 [minlen=2.0,
+		pos="e,985.16,144 2050.6,144 2050.6,144 995.16,144 995.16,144"];
+	12 -> 11	 [minlen=2.0,
+		pos="e,4345.2,55 2172.2,55 2172.2,55 4335.2,55 4335.2,55"];
+	5	 [color=red,
+		fixedsize=true,
+		height=1,
+		label="Result 5",
+		pos="4360,195",
+		shape=invtriangle,
+		style="rounded,filled",
+		width=1];
+	10 -> 5	 [minlen=2.0,
+		pos="e,4336,195 3165.1,195 3165.1,195 4326,195 4326,195"];
+	2	 [color=green,
+		fixedsize=true,
+		height=1,
+		label="Event 2",
+		pos="36,256",
+		shape=triangle,
+		style="rounded,filled",
+		width=1];
+	2 -> 1	 [minlen=2.0,
+		pos="e,1856.8,66 36,237.78 36,190.23 36,66 36,66 36,66 1846.8,66 1846.8,66"];
+}

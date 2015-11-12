@@ -3,12 +3,9 @@ BEGIN {
 
 BEG_G {
 /*
-dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+  dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
   dot input.dot | gvpr -c -fswimy.g | neato -n2  > output.dot
-
-   dot input.dot | gvpr -c -fswimy.g > output.dot | grep -E "(pos)|(bb)"
-
-
+  dot input.dot | gvpr -c -fswimy.g > output.dot | grep -E "(pos)|(bb)"
 */
   // $.bb = "";
   graph_t sg, other_sg;
