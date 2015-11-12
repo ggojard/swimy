@@ -1,5 +1,5 @@
 BEGIN {
-   }
+}
 
 BEG_G {
 /*
@@ -19,7 +19,7 @@ BEG_G {
   string ur, ll;
   int sg_list [graph_t];
 
-  /* max size of the graph  */
+  // max size of the graph
   maxy_graph = yOf(urOf($.bb));
   maxx_graph = xOf(urOf($.bb));
   int count_sg = -1;
@@ -28,17 +28,17 @@ BEG_G {
   if ($.rankdir == "LR") {
     /* For each sub graph */
     /* get LL Low Left position of each subgraph */
-    /* get UR Upper Right position of each subgraph */
+    /* get UR Upper Right position of each sub graph */
     /* get min and max of every position */
 
-    /* Count and list all clusters before sorting */
+    // Count and list all clusters before sorting
     for (sg=fstsubg($); sg ; sg=nxtsubg(sg)) {
       if (sg.name != "cluster*") continue;
         count_sg = count_sg + 1;
         list_sg[count_sg] = sg;
     }
 
-    /* sort all subgraphs based on their x pos from left to right */
+    // sort all subgraphs based on their x pos from left to right
     for (sg=fstsubg($); sg ; sg=nxtsubg(sg)) {
       if (sg.name != "cluster*") continue;
       int i, j;
@@ -58,7 +58,7 @@ BEG_G {
        }
     }
 
-    /* MIN and MAX among all sub graphs */
+    // MIN and MAX among all sub graphs
     for (k = 0; k <= count_sg; ++k) {
       lly = (double)yOf(llOf(list_sg[k].bb));
       ury = (double)yOf(urOf(list_sg[k].bb));
@@ -70,20 +70,21 @@ BEG_G {
     list_sg[0].bb = sprintf ("%s,%s,%.03f,%.03f", xOf(llOf(list_sg[0].bb)), miny, xOf(urOf(list_sg[0].bb)), maxy_graph);
     list_sg[0].lp = sprintf ("%s,%.03f", xOf(list_sg[0].lp), maxy);
 
-    /* RESIZE each sub graph to MAX */
+    // RESIZE each sub graph to MAX
     for (k = 1; k <= count_sg; ++k) {
 
       sscanf (n.pos, "%f,%f", &x, &y);
       n.pos = sprintf("%f,%f",  x + xoff[n], y);
 
-
       llx = (double)xOf(llOf(list_sg[k].bb));
       urx = (double)xOf(urOf(list_sg[k].bb));
       llx_previous = (double)xOf(llOf(list_sg[k-1].bb));
       urx_previous = (double)xOf(urOf(list_sg[k-1].bb));
-      delta = (double)llx - (double)urx_previous;
 
-      if (delta != 0) {
+      delta = (double)llx - (double)urx_previous;
+      // si cluster actuel est
+
+      if (delta <= 0) {
         // clusters are on each other, Need to move them
         offset = (double)urx_previous - (double)llx_previous;
       }
@@ -100,6 +101,7 @@ BEG_G {
 
       // Move cluster and labels
       offset_cumul = offset_cumul + offset + 10.0;
+      // offset_cumul = offset_cumul + largeur du previous cluster + marge de 10.0
       llx = llx + offset_cumul;
       urx = urx + offset_cumul;
       list_sg[k].bb = sprintf ("%s,%s,%.01f,%.01f", llx, miny, urx, maxy_graph);

@@ -1,5 +1,5 @@
 digraph diagram24 {
-	graph [bb="0,8,993,292",
+	graph [bb="0,0,993,325",
 		nodesep=0.5,
 		overlap=scalexy,
 		rankdir=LR,
@@ -10,11 +10,11 @@ digraph diagram24 {
 		label="\N"
 	];
 	subgraph cluster_8 {
-		graph [bb="525,8,662,256",
+		graph [bb="525,8,662,317",
 			color=lightblue,
 			label="ROLE 1",
 			lheight=0.19,
-			lp="565,244",
+			lp="593.5,232",
 			lwidth=0.65,
 			style=filled
 		];
@@ -22,17 +22,17 @@ digraph diagram24 {
 			fixedsize=true,
 			height=0.84722,
 			label="act 4",
-			pos="593.5,144",
+			pos="593.5,182",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 	}
 	subgraph cluster_7 {
-		graph [bb="137,8,468,256",
+		graph [bb="137,8,468,317",
 			color=orange,
 			label="ROLE 2",
 			lheight=0.19,
-			lp="177,244",
+			lp="302.5,194",
 			lwidth=0.65,
 			style=filled
 		];
@@ -66,11 +66,11 @@ digraph diagram24 {
 			pos="e,338.71,56.5 266.08,56.5 266.08,56.5 328.71,56.5 328.71,56.5"];
 	}
 	subgraph cluster_9 {
-		graph [bb="719,8,856,256",
+		graph [bb="719,8,856,317",
 			color=darkgreen,
 			label="ROLE 3",
 			lheight=0.19,
-			lp="759,244",
+			lp="787.5,306",
 			lwidth=0.65,
 			style=filled
 		];
@@ -78,45 +78,60 @@ digraph diagram24 {
 			fixedsize=true,
 			height=0.84722,
 			label="act 10",
-			pos="787.5,195",
+			pos="787.5,256",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 	}
 	4 -> 10	 [minlen=2.0,
-		pos="e,726.71,169.5 654.08,169.5 654.08,169.5 716.71,169.5 716.71,169.5"];
+		pos="e,732,225.25 654.25,197.25 691.46,197.25 732,197.25 732,197.25 732,197.25 732,215.25 732,215.25"];
 	11	 [color=red,
 		fixedsize=true,
 		height=1,
 		label="Result 11",
-		pos="957,69",
+		pos="787.5,93",
 		shape=invtriangle,
 		style="rounded,filled",
 		width=1];
 	4 -> 11	 [minlen=2.0,
-		pos="e,957,87.308 654.34,136 757.82,136 957,136 957,136 957,136 957,97.308 957,97.308"];
+		pos="e,788,111.23 654.24,166.75 711.31,166.75 788,166.75 788,166.75 788,166.75 788,121.23 788,121.23"];
 	3 -> 4	 [minlen=2.0,
-		pos="e,532.71,144 460.08,144 460.08,144 522.71,144 522.71,144"];
+		pos="e,532.71,163 460.08,163 460.08,163 522.71,163 522.71,163"];
 	12 -> 11	 [minlen=2.0,
-		pos="e,942.04,55 460.22,55 460.22,55 932.04,55 932.04,55"];
+		pos="e,782.87,63.833 460.12,63.833 460.12,63.833 772.87,63.833 772.87,63.833"];
+	10 -> 4	 [color=red,
+		constraint=false,
+		minlen=1.0,
+		pos="e,654.36,182 737,225.47 737,205.09 737,182 737,182 737,182 664.36,182 664.36,182",
+		style=filled];
+	10 -> 3	 [color=red,
+		constraint=false,
+		minlen=1.0,
+		pos="e,460.34,140.25 742,225.29 742,190.99 742,140.25 742,140.25 742,140.25 470.34,140.25 470.34,140.25",
+		style=filled];
+	10 -> 12	 [color=red,
+		constraint=false,
+		minlen=1.0,
+		pos="e,460.03,70.667 747,225.4 747,172.76 747,70.667 747,70.667 747,70.667 470.03,70.667 470.03,70.667",
+		style=filled];
 	5	 [color=red,
 		fixedsize=true,
 		height=1,
 		label="Result 5",
-		pos="957,195",
+		pos="957,256",
 		shape=invtriangle,
 		style="rounded,filled",
 		width=1];
 	10 -> 5	 [minlen=2.0,
-		pos="e,932.89,195 848.21,195 848.21,195 922.89,195 922.89,195"];
+		pos="e,932.89,256 848.21,256 848.21,256 922.89,256 922.89,256"];
 	2	 [color=green,
 		fixedsize=true,
 		height=1,
 		label="Event 2",
-		pos="36,256",
+		pos="36,66",
 		shape=triangle,
 		style="rounded,filled",
 		width=1];
 	2 -> 1	 [minlen=2.0,
-		pos="e,144.79,66 36,237.78 36,190.23 36,66 36,66 36,66 134.79,66 134.79,66"];
+		pos="e,144.7,66 60.285,66 60.285,66 134.7,66 134.7,66"];
 }

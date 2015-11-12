@@ -10,9 +10,9 @@ rankdir=LR;overlap=scalexy;splines=ortho;sep=1;nodesep=0.5;
 
 node[fontsize=14.0]
 
-subgraph cluster_8 { label="ROLE 1";style=bold;color=lightblue;4}
-subgraph cluster_7 { label="ROLE 2";style=bold;color=orange;1;3;12}
-subgraph cluster_9 { label="ROLE 3";style=bold;color=darkgreen;10}
+subgraph cluster_8 { label="ROLE 1";style=filled;color=lightblue;4}
+subgraph cluster_7 { label="ROLE 2";style=filled;color=orange;1;3;12}
+subgraph cluster_9 { label="ROLE 3";style=filled;color=darkgreen;10}
 
 
 "4"  [label="act 4"; shape=box,style="rounded,filled",color=yellow,fixedsize=true,width=1.6806,height=0.84722]
@@ -36,7 +36,7 @@ subgraph cluster_9 { label="ROLE 3";style=bold;color=darkgreen;10}
 /* CONSTRAINTS*/
 "10" -> "3" [minlen=1.0,constraint=false,style="filled",color=red];
 "10" -> "4" [minlen=1.0,constraint=false,style="filled",color=red];
-"10" -> "12" [minlen=1.0,constraint=false,style="filled",color=darkgreen];
+"10" -> "12" [minlen=1.0,constraint=false,style="filled",color=red];
 
 
 }

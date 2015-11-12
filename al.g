@@ -1,4 +1,5 @@
 BEG_G {
+  //  --- VARIABLES
   graph_t sg;
   node_t n;
   edge_t e;
@@ -7,8 +8,9 @@ BEG_G {
   double w, h;
   double llx, lly, urx, ury;
   string ur;
+  int isFirstCluster = 0;
 
-  // Get MIN and MAX of clusters
+  // --- Get MIN and MAX of clusters
   for (sg=fstsubg($);sg;sg=nxtsubg(sg)) {
     if (sg.name != "cluster*") continue;
     x = (double)xOf(llOf(sg.bb));
@@ -21,8 +23,7 @@ BEG_G {
     miny = MIN(y,miny);
   }
 
-  int isFirstCluster = 0;
-  // RESIZE and MOVE clusters
+  // --- RESIZE and MOVE clusters
   for (sg=fstsubg($);sg;sg=nxtsubg(sg)) {
     if (sg.name != "cluster*") continue;
 
@@ -30,8 +31,9 @@ BEG_G {
     w = urx - llx;
     h = ury - lly;
 
+    // for first cluster get x and width
     if (isFirstCluster == 0) {
-      firstllx = x;
+      firstllx = llx;
       firstw = w;
       isFirstCluster = 1;
     }
@@ -65,7 +67,9 @@ BEG_G {
     xoff += urx;
     // xoff += w + 10.0;
   }
-  // REDRAW edges for Events and Results
+
+
+  // --- REDRAW edges for Events and Results
   for (n=fstnode($);n;n=nxtnode(n)) {
     if (n.shape == "triangle*") {
       n.pos = sprintf ("%s,%s", xOf(n.pos), maxy);
@@ -73,7 +77,6 @@ BEG_G {
         e.pos = "";
       }
     }
-
     if (n.shape == "invtriangle*") {
       n.pos = sprintf ("%f,%s", maxx , yOf(n.pos));
       for (e=fstin(n);e;e=nxtin(e)) {
@@ -81,6 +84,5 @@ BEG_G {
       }
     }
   }
-
 }
 
