@@ -45,14 +45,20 @@ BEG_G {
     if (n.shape == "triangle*") {
       n.pos = sprintf ("%s,%s", xOf(n.pos), maxy);
       for (e=fstout(n);e;e=nxtout(e)) {
-        e.pos = "";
+        // e.pos = "";
       }
     }
     if (n.shape == "invtriangle*") {
       n.pos = sprintf ("%f,%s", maxx_result, yOf(n.pos));
       for (e=fstin(n);e;e=nxtin(e)) {
-        e.pos = "";
+        // e.pos = "";
       }
+    }
+  }
+
+  for (n=fstnode($);n;n=nxtnode(n)) {
+    for (e=fstout(n);e;e=nxtout(e)) {
+      e.pos = "";
     }
   }
 
