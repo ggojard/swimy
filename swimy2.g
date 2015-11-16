@@ -1,4 +1,5 @@
 BEG_G {
+  // fswatch -o /Users/admin/projects/graphviz --exclude=/Users/admin/projects/graphviz/output | xargs -n1 /Users/admin/projects/graphviz/run_test.sh
   //  --- VARIABLES
   graph_t sg;
   node_t n;
@@ -16,7 +17,7 @@ BEG_G {
     x = (double)xOf(llOf(sg.bb));
     minx = MIN(x,minx);
     x = (double)xOf(urOf(sg.bb));
-    // maxx = MAX(x,maxx);
+    maxx = MAX(x,maxx);
     y = (double)yOf(urOf(sg.bb));
     maxy = MAX(y,maxy);
     y = (double)yOf(llOf(sg.bb));
@@ -31,24 +32,20 @@ BEG_G {
     w = urx - llx;
     h = ury - lly;
 
-    // for first cluster get x and width
-    if (isFirstCluster == 0) {
-      firstllx = llx;
-      firstw = w;
-      isFirstCluster = 1;
-    }
     // if current cluster is before first one
-    if (llx < firstllx) {
-      xoff += firstllx - llx;
-    }
+    // if (llx < lastllx) {
+    //   xoff += lastllx - llx;
+    // }
+    // lastllx = llx;
+
     // RESIZE GRAPH drawing area
     $.bb = (double)xOf(urOf($.bb)) + xoff ;
-    maxx += xoff;
+    maxx = xoff;
 
     // if(xoff == 0) {xoff = llx;}
     // sg.bb = sprintf("%f,%f,%f,%f", xoff, miny, xoff + w, maxy);
     sg.bb = sprintf("%f,%f,%f,%f", llx + xoff, miny, urx + xoff, maxy);
-    sg.lp = sprintf ("%.03f,%.03f",llx + xoff + 40.0, maxy - 12.0);
+    sg.lp = sprintf("%.03f,%.03f", llx + xoff + 40.0, maxy - 12.0);
     // sg.label += " + " + (string)xoff;
 
     // MOVE every Nodes inside cluster
@@ -64,7 +61,7 @@ BEG_G {
       }
     }
 
-    xoff += urx;
+    xoff = urx;
     // xoff += w + 10.0;
   }
 

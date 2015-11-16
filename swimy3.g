@@ -24,11 +24,14 @@ BEG_G {
   }
   // --- Get max result pos
   for (n=fstnode($);n;n=nxtnode(n)) {
-    if (n.shape == "invtriangle*") {
+    if (n.shape == "note*") {
       x_result = (double)xOf(n.pos);
       maxx_result = MAX(x_result,maxx_result);
     }
   }
+  // box act
+  // note invtriangle result
+  // rect triange event
 
   // --- RESIZE and MOVE clusters
   for (sg=fstsubg($);sg;sg=nxtsubg(sg)) {
@@ -36,19 +39,19 @@ BEG_G {
 
     sscanf (sg.bb, "%f,%f,%f,%f", &llx, &lly, &urx, &ury);
     sg.bb = sprintf("%f,%f,%f,%f", llx, miny, urx, maxy);
-    sg.lp = sprintf ("%.03f,%.03f",llx + 40.0, maxy - 12.0);
+    sg.lp = sprintf("%.03f,%.03f", llx + 40.0, maxy - 12.0);
   }
 
 
   // --- REDRAW edges for Events and Results
   for (n=fstnode($);n;n=nxtnode(n)) {
-    if (n.shape == "triangle*") {
+    if (n.shape == "rect*") {
       n.pos = sprintf ("%s,%s", xOf(n.pos), maxy);
       for (e=fstout(n);e;e=nxtout(e)) {
         // e.pos = "";
       }
     }
-    if (n.shape == "invtriangle*") {
+    if (n.shape == "note*") {
       n.pos = sprintf ("%f,%s", maxx_result, yOf(n.pos));
       for (e=fstin(n);e;e=nxtin(e)) {
         // e.pos = "";
