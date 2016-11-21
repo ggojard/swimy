@@ -1,0 +1,70 @@
+digraph lec_mcd {
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+
+cd D:\Users\g.gojard\Projects\graphviz
+D:\Users\g.gojard\Documents\Applications\graphviz-2.38\bin\dot.exe input/lec_mcd.dot  -Tpng  -o output/lec_mcd.png
+explorer "D:\Users\g.gojard\Projects\graphviz\output\lec_mcd.png"
+ */
+
+/*rankdir=LR; overlap=scalexy; splines=ortho; sep=1; nodesep=0.5;*/
+/*rankdir=TB;overlap=scalexy;splines=ortho;sep=1;nodesep=1;*/
+
+node[fontsize=14.0 ,fontname="arial" ,shape=box ,style="rounded"]
+edge[fontsize=12.0 ,fontname="arial" ,minlen=1.0, dir=none]
+
+"0" [label="Client"];
+"1" [label="Produit"];
+"2" [label="Pays"];
+"3" [label="Personne"];
+"4" [label="Marché"];
+"5" [label="Segment marketing"];
+"6" [label="Utilisateur"];
+"7" [label="Persona"];
+"8" [label="Données"];
+"9" [label="Offre de services"];
+"10" [label="Projet"];
+"11" [label="Indicateur"];
+"12" [label="Matière"];
+"13" [label="Business Modele"];
+"14" [label="Cadre légale"];
+"15" [label="Technologies"];
+"16" [label="Contrat"];
+
+"6" -> "1" [label=""];
+"6" -> "7" [label=""];
+"6" -> "8" [label=""];
+"5" -> "4" [label=""];
+"1" -> "2" [label=""];
+"1" -> "13" [label=""];
+"1" -> "15" [label=""];
+"1" -> "9" [label=""];
+"3" -> "6" [label=""];
+"3" -> "2" [label=""];
+"7" -> "2" [label=""];
+"2" -> "14" [label=""];
+"4" -> "2" [label=""];
+"8" -> "1" [label=""];
+"16" -> "1" [label=""];
+"0" -> "16" [label=""];
+"0" -> "1" [label=""];
+"0" -> "2" [label=""];
+"0" -> "7" [label=""];
+"0" -> "5" [label=""];
+"0" -> "4" [label=""];
+"0" -> "3" [label=""];
+"0" -> "9" [label=""];
+"0" -> "10" [label=""];
+"0" -> "13" [label=""];
+"1" -> "12" [label=""];
+"11" -> "10" [label=""];
+"11" -> "13" [label=""];
+"10" -> "1" [label=""];
+"10" -> "9" [label=""];
+"4" -> "1" [label=""];
+"7" -> "1" [label=""];
+
+
+}

@@ -1,0 +1,46 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'karma-jasmine',
+1 verbose cli   'karma-chrome-launcher',
+1 verbose cli   '--save-dev' ]
+2 info using npm@3.10.3
+3 info using node@v6.6.0
+4 verbose config Skipping project config: D:\Users\g.gojard/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly rollbackFailedOptional Starting
+9 silly rollbackFailedOptional Finishing
+10 silly runTopLevelLifecycles Starting
+11 silly runTopLevelLifecycles Finishing
+12 silly install printInstalled
+13 verbose stack Error: Failed to parse json
+13 verbose stack No data, empty input at 1:1
+13 verbose stack
+13 verbose stack ^
+13 verbose stack     at parseError (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:390:11)
+13 verbose stack     at parseJson (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:79:23)
+13 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:48:5
+13 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:78:16
+13 verbose stack     at tryToString (fs.js:455:3)
+13 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
+14 verbose cwd D:\Users\g.gojard\Projects\graphviz
+15 error Windows_NT 10.0.10586
+16 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "karma-jasmine" "karma-chrome-launcher" "--save-dev"
+17 error node v6.6.0
+18 error npm  v3.10.3
+19 error file D:\Users\g.gojard\package.json
+20 error code EJSONPARSE
+21 error Failed to parse json
+21 error No data, empty input at 1:1
+21 error
+21 error ^
+22 error File: D:\Users\g.gojard\package.json
+23 error Failed to parse package.json data.
+23 error package.json must be actual JSON, not just JavaScript.
+23 error
+23 error This is not a bug in npm.
+23 error Tell the package author to fix their package.json file. JSON.parse
+24 verbose exit [ 1, true ]

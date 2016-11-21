@@ -1,0 +1,33 @@
+digraph tactac_web_flow_platform_administrator {
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+ */
+
+/*rankdir=LR; overlap=scalexy; splines=ortho; sep=1; nodesep=0.5;*/
+/*rankdir=TB;overlap=scalexy;splines=ortho;sep=1;nodesep=1;*/
+
+node[fontsize=14.0, fontname="arial", shape=box, style="rounded"]
+edge[fontsize=12.0, fontname="arial", minlen=2.0]
+
+"9" [label="Email verification account creation", style="rounded,filled", color=grey];
+"3" [label="Sign in (login)" ,style="rounded,filled" ,color=green];
+"4" [label="Forgot your password"];
+"10" [label="Email password recovery" ,style="rounded,filled" ,color=grey];
+
+"3" -> "4" [constraint=false];
+"3" -> "3" [label="Wrong login or Password" ,color=red];
+"4" -> "10" [color=blue];
+
+"11" [label="User list"];
+"12" [label="Create user"];
+"14" [label="View / Edit user"];
+"3" -> "11";
+"11" -> "12";
+"12" -> "11";
+"14" -> "11";
+"11" -> "14";
+"12" -> "9" [color=blue];
+
+}

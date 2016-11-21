@@ -1,0 +1,63 @@
+digraph tactac_ipad_flow_field_user {
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+ */
+
+/*rankdir=LR; overlap=scalexy; splines=ortho; sep=1; nodesep=0.5;*/
+/*rankdir=TB;overlap=scalexy;splines=ortho;sep=1;nodesep=1;*/
+
+node[fontsize=14.0, fontname="arial", shape=box, style="rounded"]
+edge[fontsize=12.0, fontname="arial", minlen=1.3]
+
+"3" [label="Sign in (login)" ,style="rounded,filled" ,color=green];
+
+/*,style="dashed"*/
+
+"18" [label="View Instruction Sheet list"];
+"20" [label="Preview Steps list"];
+"3" -> "18";
+"18" -> "20";
+"20" -> "18";
+
+/*"25" [label="View Instruction Sheet Feedback"];
+"26" [label="View Feedback"];
+"18" -> "25";
+"25" -> "26";
+*/
+"27" [label="View Execution list"];
+"34" [label="Create Execution"];
+"28" [label="Capture context data"];
+"29" [label="Review Execution\nResults", style="rounded,filled", color=red];
+"30" [label="View Step to execute\nProvide answer\nand proof image"];
+"31" [label="View and Create\nFeedback on a step\n(Call assistance\nif necessary)"];
+/*"31" [label="View Feedback of a step"];*/
+/*"32" [label="Create Feedback on a Step"];*/
+/*"33" [label="Call request for support" ,style="rounded,filled" ,color=grey];*/
+"20" -> "34";
+"20" -> "27";
+"27" -> "20";
+
+"27" -> "29";
+"34" -> "28";
+"28" -> "30";
+/* [label="Set context data"];*/
+/*"28" -> "29";*/
+/*"29" -> "28" [style="dashed"];*/
+
+/* [constraint=false] */
+"30" -> "30" [label="Provide answer\n or goto previous"];
+/*"30" -> "30" [label="previous"];*/
+"30" -> "29" [label="at any time or\nat the last step"];
+"30" -> "31";
+/*"30" -> "32";
+"30" -> "33";
+*/
+"29" -> "30";
+"31" -> "30";
+/*"32" -> "30";
+"33" -> "30";
+*/
+"29" -> "18"  [label="execution\ncompleted"];
+}

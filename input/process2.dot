@@ -1,0 +1,30 @@
+/*
+dot process.dot | neato -n2 -Tpng > process.png
+dot process.dot | neato -n2 > process_O.dot
+*/
+
+/*digraph process {
+  rankdir=TB;overlap=scalexy;sep=1;nodesep=1;
+  node[fontsize=14.0; fontname="arial"]
+  edge[fontsize=12.0; fontname="arial"]
+
+  "1" [label="step 1"; shape=box,style="rounded", color=yellow]
+  "2" [label="step 2"; shape=box,style="rounded", color=black]
+  "3" [label="step 3"; shape=box,style="rounded", color=black]
+  "4" [label="step 4"; shape=box,style="rounded", color=black]
+  "5" [label="step 5"; shape=box,style="rounded", color=black]
+  "6" [label="step 6"; shape=box,style="rounded", color=orange]
+
+  "1" -> "2"  [];
+  "2" -> "3"  [color=green];
+  "2" -> "4"  [color=red];
+  "2" -> "5"  [color=grey];
+  "3" -> "6"  [];
+  "4" -> "1"  [];
+  "5" -> "6"  [];
+}*/
+
+digraph instructionSheet39 { rankdir=TB; overlap=scalexy; sep=1; nodesep=1; node[fontsize=14.0, fontname="arial", shape=box, style="rounded"] edge[fontsize=12.0, fontname="arial"] "128" [label="1) Turn off electrical power"]; "128" -> "129"; "129" [label="2) Remove all network cables"]; "129" -> "130"; "130" [label="3) Prepare the slot"]; "130" -> "131"; "131" [label="4) Align and Slide the card "]; "131" -> "132" [color=green]; "131" -> "130" [color=red]; "131" -> "135" [color=grey]; "132" [label="5) Push interface card "]; "132" -> "133"; "133" [label="6) Tighten the card "]; "133" -> "134"; "134" [label="7) Connect the card"]; "134" -> "135"; "135" [label="8) Turn on power to the router "]; "135" -> "136"; "136" [label="9) Verify Installation of Interface Cards "]; "136" -> "128" [color=red]; }
+
+/*digraph process { rankdir=TB; overlap=scalexy; sep=1; nodesep=1; node[fontsize=14.0, fontname="arial", shape=box, style="rounded"] edge[fontsize=12.0, fontname="arial"] "44" [label="verifier ecran 1"]; "44" -> "45" [color=green]; "44" -> "46" [color=red]; "44" -> "46" [color=grey]; "45" [label="verif 2"]; "46" [label="verif 3"]; }
+*/

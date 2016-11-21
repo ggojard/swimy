@@ -1,0 +1,52 @@
+digraph lec_services_features {
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+
+cd D:\Users\g.gojard\Projects\graphviz
+D:\Users\g.gojard\Documents\Applications\graphviz-2.38\bin\dot.exe input/lec_services_features.dot  -Tpng  -o output/lec_services_features.png
+explorer "D:\Users\g.gojard\Projects\graphviz\output\lec_services_features.png"
+ */
+
+rankdir=LR; overlap=scalexy; splines=ortho; sep=1; nodesep=0.5;
+/*rankdir=TB;overlap=scalexy;splines=ortho;sep=1;nodesep=1;*/
+
+node[fontsize=14.0 ,fontname="arial" ,shape=box ,style="filled"]
+edge[fontsize=12.0 ,fontname="arial" ,minlen=0.2, dir=none]
+
+
+
+subgraph cluster_0 {
+		label = "D2/D3/D5\nStockage sécurisé\n/versioning/recherche";
+		"1" [label="Connexion au service\ndepuis Portail", color="green"];
+		"2" [label="Model data", color="green"];
+		"3" [label="Search models\nby Google-like field", color="green"];
+		"4" [label="Display models\nby tree view", color="orange"];
+		"5" [label="Search models\nby additional data", color="green"];
+		"6" [label="Search models\nby model criteria", color="orange"];
+		"7" [label="View model data", color="green"];
+		"8" [label="View variant data", color="orange"];
+		"9" [label="View piece data"];
+		"10" [label="View graphical\npiece data, zomm, pan"];
+		"11" [label="Use default datas"];
+		"12" [label="Add free data"];
+		"13" [label="Make manual version\naccording to development phase"];
+		"14" [label="Automatic version\nwhen saving model"];
+		"15" [label="Compare 2 versions\nwith graphical view on piece"];
+		"16" [label=".mdl data (Modaris)"];
+		"17" [label=".plx data (Diamino)"];
+		"18" [label="Kaledo data"];
+		"19" [label=".mtg data (3D)"];
+		"20" [label="Format Word"];
+		"21" [label="Format Excel"];
+		"22" [label="Format PDF"];
+		"23" [label="Format html"];
+		"24" [label="Viewer complet\n& comparaison manuelle\n& visuelle de modèles"];
+		"25" [label="Auto-versioning\n& ajout des placements DiaminoFashion\n& modèles PGS 2D"];
+		"26" [label="Gestion documentaire avancée,\nen s’appuyant sur\nun fournisseur tiers"];
+		"27" [label="Création/indexation\n& recherche sur métadonnées\nadditionnelles libres"];
+		"28" [label="Ajout collaboration externe,\nen s’appuyant sur\nun fournisseur tiers"];
+	}
+
+}

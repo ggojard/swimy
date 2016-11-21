@@ -14,7 +14,11 @@
 #   echo "  create-release.sh 2.9.0 tags/RELEASE_2_9_0"
 #   exit 65
 # fi
-
+echo
+echo
+echo
+echo "--------- "
+date
 echo "--------- START generating DOT ---------"
 
 dot input/input.dot -o output_d.dot

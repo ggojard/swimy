@@ -1,0 +1,50 @@
+digraph tactac_web_app_map {
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+ */
+
+/*rankdir=LR; overlap=scalexy; splines=ortho; sep=1; nodesep=0.5;*/
+/*rankdir=TB;overlap=scalexy;splines=ortho;sep=1;nodesep=1;*/
+
+node[fontsize=14.0, fontname="arial", shape=box, style="rounded"]
+edge[fontsize=12.0, fontname="arial", minlen=2.0]
+
+/*"1" [label="Splash screen"];*/
+/*"1" -> "2";*/
+/*"2" [label="Sign up (create account)"];*/
+"9" [label="Email verification account creation", style="rounded,filled", color=grey];
+"3" [label="Sign in (login)" ,style="rounded,filled" ,color=green];
+"4" [label="Forgot your password"];
+"10" [label="Email password recovery" ,style="rounded,filled" ,color=grey];
+
+/*"2" -> "9" [color=blue]; /* ,constraint=false */
+/*"3" -> "2";*/
+"3" -> "4" [constraint=false];
+"3" -> "3" [label="Wrong login or Password" ,color=red];
+"3" -> "5" [label="Casewise administrator sign in"];
+"4" -> "10" [color=blue];
+
+"5" [label="Platform list"];
+"6" [label="Create platform"];
+"7" [label="View / Edit platform"];
+"8" [label="Create platform administrator" ,style="rounded,filled" ,color=grey];
+"5" -> "6";
+"6" -> "5";
+"5" -> "7";
+"7" -> "5";
+"6" -> "8";
+"8" -> "9" [label="Platform administrator account" ,color=blue ];
+
+"11" [label="User list"];
+"12" [label="Create user"];
+"14" [label="View / Edit user"];
+"3" -> "11";
+"11" -> "12";
+"12" -> "11";
+"14" -> "11";
+"11" -> "14";
+"12" -> "10" [color=blue];
+
+}

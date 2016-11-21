@@ -1,0 +1,52 @@
+digraph leccdm {
+
+ /*
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 -Tpng > output.png
+ dot input.dot | gvpr -c -fswimy.g | neato -n2 > output.dot
+
+D:
+
+cd "d:\Users\g.gojard\Documents\Personel\graphviz"
+
+D:\Users\g.gojard\Documents\Applications\graphviz-2.38\bin\dot.exe "input/lecorg.dot"  -Tpng  -o "output/lecorg.png"
+
+ */
+
+/*rankdir=LR; overlap=scalexy; splines=ortho; sep=1; nodesep=0.5;*/
+/*rankdir=TB; overlap=scalexy; splines=ortho; sep=1; nodesep=1;*/
+
+ /* rankdir=TB; overlap=scalexy; sep=0.1; nodesep=1; */ 
+node[fontsize=14.0 ,fontname="arial" ,shape="note" ,style="filled" ,color="#dddddd"];
+edge[fontsize=12.0 ,fontname="arial" ,minlen=1.0];
+
+/* "" [label="" ,color=red]; */
+"1" [label="Modele"];
+"2" [label="Patron"];
+"3" [label="Piece"];
+"4" [label="Collection"];
+"5" [label="Texture"];
+"6" [label="Gradation"];
+"7" [label="Variante"];
+"8" [label="Prototype"];
+"9" [label="Costing"];
+"10" [label="Triplure"];
+"11" [label="Doublure"];
+"12" [label="Matière"];
+"13" [label="Accessoire"];
+"14" [label="Produit"];
+"15" [label="Placement"];
+
+
+
+"1" -> "4" [label="Compose"];
+"3" -> "2" [label="Compose"];
+"5" -> "3" [label="Compose"];
+"2" -> "1" [label="est associé à"];
+"7" -> "2" [label="concerne"];
+"8" -> "2" [label="permet de concevoir"];
+"13" -> "3" [label="Compose"];
+"15" -> "1" [label="concerne"];
+
+
+
+}

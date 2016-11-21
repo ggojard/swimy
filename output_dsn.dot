@@ -1,7 +1,8 @@
 digraph diagram24 {
-	graph [bb="0,8,993,292",
+	graph [bb="0,0,993,397",
 		nodesep=0.5,
 		overlap=scalexy,
+		pos=397,
 		rankdir=LR,
 		sep=1,
 		splines=ortho
@@ -10,37 +11,37 @@ digraph diagram24 {
 		label="\N"
 	];
 	subgraph cluster_8 {
-		graph [bb="525,8,662,256",
+		graph [bb="137,0,856,100",
 			color=lightblue,
-			label="ROLE 1",
+			label="ROLE 1 / 100",
 			lheight=0.19,
-			lp="565,244",
-			lwidth=0.65,
+			lp="187,88",
+			lwidth=1.10,
 			style=filled
 		];
 		4		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
 			label="act 4",
-			pos="593.5,144",
+			pos="593.5,39",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 	}
 	subgraph cluster_7 {
-		graph [bb="137,8,468,256",
+		graph [bb="137,100,856,297",
 			color=orange,
-			label="ROLE 2",
+			label="ROLE 2 / 197",
 			lheight=0.19,
-			lp="177,244",
-			lwidth=0.65,
+			lp="187,285",
+			lwidth=1.10,
 			style=filled
 		];
 		1		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
 			label="act 1",
-			pos="205.5,66",
+			pos="205.5,158",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
@@ -48,43 +49,43 @@ digraph diagram24 {
 			fixedsize=true,
 			height=0.84722,
 			label="act 3",
-			pos="399.5,144",
+			pos="399.5,236",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 		1 -> 3		 [minlen=2.0,
-			pos="e,399.5,113.5 266.08,87 323.01,87 399.5,87 399.5,87 399.5,87 399.5,103.5 399.5,103.5"];
+			pos="e,338.92,212 205.5,188.79 205.5,200.91 205.5,212 205.5,212 205.5,212 328.92,212 328.92,212"];
 		12		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
 			label="act 12",
-			pos="399.5,47",
+			pos="399.5,139",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 		1 -> 12		 [minlen=2.0,
-			pos="e,338.71,56 266.08,56 266.08,56 328.71,56 328.71,56"];
+			pos="e,338.71,148 266.08,148 266.08,148 328.71,148 328.71,148"];
 	}
 	subgraph cluster_9 {
-		graph [bb="719,8,856,256",
+		graph [bb="137,297,856,397",
 			color=darkgreen,
-			label="ROLE 3",
+			label="ROLE 3 / 100",
 			lheight=0.19,
-			lp="759,244",
-			lwidth=0.65,
+			lp="187,385",
+			lwidth=1.10,
 			style=filled
 		];
 		10		 [color=yellow,
 			fixedsize=true,
 			height=0.84722,
 			label="act 10",
-			pos="787.5,195",
+			pos="787.5,336",
 			shape=box,
 			style="rounded,filled",
 			width=1.6806];
 	}
 	4 -> 10	 [minlen=2.0,
-		pos="e,726.71,169 654.08,169 654.08,169 716.71,169 716.71,169"];
+		pos="e,787.5,305.34 654.08,57 711.01,57 787.5,57 787.5,57 787.5,57 787.5,295.34 787.5,295.34"];
 	11	 [color=red,
 		fixedsize=true,
 		height=1,
@@ -94,11 +95,11 @@ digraph diagram24 {
 		style="rounded,filled",
 		width=1];
 	4 -> 11	 [minlen=2.0,
-		pos="e,957,105.25 654.34,136 757.82,136 957,136 957,136 957,136 957,115.25 957,115.25"];
+		pos="e,920.86,45 654.34,45 654.34,45 910.86,45 910.86,45"];
 	3 -> 4	 [minlen=2.0,
-		pos="e,532.71,144 460.08,144 460.08,144 522.71,144 522.71,144"];
+		pos="e,593.5,69.771 460.08,218 517.01,218 593.5,218 593.5,218 593.5,218 593.5,79.771 593.5,79.771"];
 	12 -> 11	 [minlen=2.0,
-		pos="e,920.86,55 460.22,55 460.22,55 910.86,55 910.86,55"];
+		pos="e,957,105.11 460.22,133 604.72,133 957,133 957,133 957,133 957,115.11 957,115.11"];
 	5	 [color=red,
 		fixedsize=true,
 		height=1,
@@ -108,7 +109,7 @@ digraph diagram24 {
 		style="rounded,filled",
 		width=1];
 	10 -> 5	 [minlen=2.0,
-		pos="e,920.85,195 848.21,195 848.21,195 910.85,195 910.85,195"];
+		pos="e,957,231.31 848.21,336 896.85,336 957,336 957,336 957,336 957,241.31 957,241.31"];
 	2	 [color=green,
 		fixedsize=true,
 		height=1,
@@ -118,5 +119,5 @@ digraph diagram24 {
 		style="rounded,filled",
 		width=1];
 	2 -> 1	 [minlen=2.0,
-		pos="e,144.79,66 36,219.82 36,164.69 36,66 36,66 36,66 134.79,66 134.79,66"];
+		pos="e,144.79,158 36,219.79 36,191.87 36,158 36,158 36,158 134.79,158 134.79,158"];
 }
